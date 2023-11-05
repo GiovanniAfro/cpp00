@@ -6,12 +6,12 @@
 /*   By: gcavanna <gcavanna@student.42firenze.it    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 12:41:24 by gcavanna          #+#    #+#             */
-/*   Updated: 2023/11/05 15:52:23 by gcavanna         ###   ########.fr       */
+/*   Updated: 2023/11/05 15:59:01 by gcavanna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include <iostream>
+#include <cctype>
 
 int main(int ac, char **av) 
 {    
