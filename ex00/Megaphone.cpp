@@ -6,31 +6,32 @@
 /*   By: gcavanna <gcavanna@student.42firenze.it    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 12:41:24 by gcavanna          #+#    #+#             */
-/*   Updated: 2023/11/01 13:54:12 by gcavanna         ###   ########.fr       */
+/*   Updated: 2023/11/05 15:52:23 by gcavanna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
 #include <iostream>
 
-int main(int ac, char** av) {
-    if (ac == 1) {
+int main(int ac, char **av) 
+{    
+    if (ac == 1) 
+    {
         std::cerr << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
         return 1;
     }
 
-    for (int i = 1; i < ac; i++) {
-        for (int j = 0; av[i][j]; j++) {
+    for (int i = 1; i < ac; i++) 
+    {
+        for (int j = 0; av[i][j]; j++) 
+        {
             char c = av[i][j];
-            if (c >= 'a' && c <= 'z') {
-                // Convert lowercase letters to uppercase
+            if (c >= 'a' && c <= 'z') 
                 c = toupper(c);
-            }
             std::cout << c;
         }
-        if (i < ac - 1) {
-            // Add a space between words
+        if (i < ac - 1) 
             std::cout << " ";
-        }
     }
     std::cout << std::endl;
 

@@ -6,39 +6,38 @@
 #    By: gcavanna <gcavanna@student.42firenze.it    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/01 13:50:09 by gcavanna          #+#    #+#              #
-#    Updated: 2023/11/01 13:50:43 by gcavanna         ###   ########.fr        #
+#    Updated: 2023/11/05 15:29:59 by gcavanna         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = 
 
-SRC = main.cpp Bureaucrat.cpp
-CC		= c++
-FLAGS	= -Wall -Wextra -Werror -std=c++98
-RM		= rm -rf
+NAME = megaphone
 
-#Colors:
-GREEN		=	\e[92;5;118m
-YELLOW		=	\e[93;5;226m
-GRAY		=	\e[33;2;37m
-RESET		=	\e[0m
-CURSIVE		=	\e[33;3m
+SRC = MegaPhone.cpp
+CC = c++
+FLAGS = -Wall -Wextra -Werror -std=c++98
+RM = rm -rf
 
-.PHONY: all clean re
+# Colors:
+GREEN = \e[92m
+YELLOW = \e[91m
+GRAY = \e[90m
+RESET = \e[0m
+
+.PHONY: all clean fclean re
 
 all: $(NAME)
 
-$(NAME): 
-	@printf "$(CURSIVE)$(GRAY) 	- Compiling $(NAME)... $(RESET)\n"
+$(NAME):
+	@printf "$(GRAY)    - Compiling, stupid who reads $(NAME)... $(RESET)\n"
 	@ $(CC) $(FLAGS) $(SRC) -o $(NAME)
-	@printf "$(GREEN)    - Executable ready.\n$(RESET)"
+	@printf "$(GREEN)    - yoyo the executable is here.$(RESET)\n"
 
 clean:
 	@$(RM) $(NAME)
-	@printf "$(YELLOW)    - Executable removed.$(RESET)\n"
+	@printf "$(YELLOW)    - i'm done.$(RESET)\n"
 
-fclean:
-	@$(RM) $(NAME)
-	@printf "$(YELLOW)    - Executable removed.$(RESET)\n"
+fclean: clean
 
-re: clean all
+re: fclean all
+
