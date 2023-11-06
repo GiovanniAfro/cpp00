@@ -6,7 +6,7 @@
 /*   By: gcavanna <gcavanna@student.42firenze.it    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 17:28:28 by gcavanna          #+#    #+#             */
-/*   Updated: 2023/11/05 19:58:50 by gcavanna         ###   ########.fr       */
+/*   Updated: 2023/11/06 14:52:54 by gcavanna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,6 @@ void Contact::setContactInfo(void)
     firstName = input;
 
     std::cout << "Enter last name: ";
-    std::cin.ignore();
     std::getline(std::cin, input);
     if (input.empty())
     {
@@ -48,7 +47,6 @@ void Contact::setContactInfo(void)
     lastName = input;
 
     std::cout << "Enter nickname: ";
-    std::cin.ignore();
     std::getline(std::cin, input);
     if (input.empty())
     {
@@ -58,7 +56,6 @@ void Contact::setContactInfo(void)
     nickName = input;
 
     std::cout << "Enter phone number: ";
-    std::cin.ignore();
     std::getline(std::cin, input);
     if (input.empty())
     {
@@ -68,7 +65,6 @@ void Contact::setContactInfo(void)
     phoneNumber = input;
 
     std::cout << "Enter darkest secret :D : ";
-    std::cin.ignore();
     std::getline(std::cin, input);
     if (input.empty())
     {
