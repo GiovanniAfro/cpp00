@@ -6,7 +6,7 @@
 /*   By: gcavanna <gcavanna@student.42firenze.it    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 18:02:07 by gcavanna          #+#    #+#             */
-/*   Updated: 2023/11/06 15:38:23 by gcavanna         ###   ########.fr       */
+/*   Updated: 2023/11/06 23:08:38 by gcavanna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ void PhoneBook::addContact(void)
 
 void PhoneBook::getContact(void) const
 {
-    std::cout << "|   Index  |First Name| Last Name|  Nickname|" << std::endl;
+    std::cout << "|   Index  | First Name| Last Name|  Nickname|" << std::endl;
 
     int validContacts = 0;
     for (int i = 0; i < contactCount; i++)
@@ -61,32 +61,33 @@ void PhoneBook::getContact(void) const
 
     if (validContacts == 0)
     {
-        std::cout << "No valid contacts to dysplay" << std::endl;
+        std::cout << "No valid contacts to display" << std::endl;
         return;
     }
 
     int index;
     std::cout << std::endl;
     std::cout << "Enter the index of the contact to display: ";
-    std::cin >> index;
 
-    if (index >= 0 && index < validContacts)
+    while (!(std::cin >> index) || index < 0 || index >= validContacts)
     {
-        int validIndex = 0;
-        for (int i = 0; i < contactCount; i++)
+        std::cout << "Invalid input. Please enter a valid index: ";
+        std::cin.clear();
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    }
+
+    int validIndex = 0;
+    for (int i = 0; i < contactCount; i++)
+    {
+        if (!contacts[i].getEmpty())
         {
-            if (!contacts[i].getEmpty())
+            if (validIndex == index)
             {
-                if (validIndex == index)
-                {
-                    contacts[i].getDetails();
-                    break;
-                }
-                validIndex++;
+                contacts[i].getDetails();
+                break;
             }
-    
+            validIndex++;
         }
     }
-    else
-        std::cout << "Invalid index. Please enter a valid index." << std::endl;
 }
+
