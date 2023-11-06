@@ -6,7 +6,7 @@
 /*   By: gcavanna <gcavanna@student.42firenze.it    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 16:58:06 by gcavanna          #+#    #+#             */
-/*   Updated: 2023/11/05 18:45:51 by gcavanna         ###   ########.fr       */
+/*   Updated: 2023/11/05 19:45:00 by gcavanna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,9 @@ class Contact
         void    getDetails(void) const;
 
     private:
-        std::string fisrtName;
+        std::string firstName;
         std::string lastName;
-        std::string nickname;
+        std::string nickName;
         std::string phoneNumber;
         std::string darkestSecret;
 };
