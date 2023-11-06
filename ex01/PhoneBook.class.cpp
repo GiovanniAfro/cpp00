@@ -6,7 +6,7 @@
 /*   By: gcavanna <gcavanna@student.42firenze.it    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 18:02:07 by gcavanna          #+#    #+#             */
-/*   Updated: 2023/11/06 23:08:38 by gcavanna         ###   ########.fr       */
+/*   Updated: 2023/11/06 23:40:15 by gcavanna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void PhoneBook::addContact(void)
         return;
     }
 
-    if (contactCount < 8)
+    if (contactCount < 8 && !newContact.getEmpty())
     {
         contacts[contactCount] = newContact;
         contactCount++;
@@ -45,9 +45,10 @@ void PhoneBook::addContact(void)
     }
 }
 
+
 void PhoneBook::getContact(void) const
 {
-    std::cout << "|   Index  | First Name| Last Name|  Nickname|" << std::endl;
+    std::cout << "|   Index  |First Name| Last Name|  Nickname|" << std::endl;
 
     int validContacts = 0;
     for (int i = 0; i < contactCount; i++)
@@ -90,4 +91,3 @@ void PhoneBook::getContact(void) const
         }
     }
 }
-

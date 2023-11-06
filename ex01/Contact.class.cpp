@@ -6,7 +6,7 @@
 /*   By: gcavanna <gcavanna@student.42firenze.it    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 17:28:28 by gcavanna          #+#    #+#             */
-/*   Updated: 2023/11/06 14:52:54 by gcavanna         ###   ########.fr       */
+/*   Updated: 2023/11/06 23:44:20 by gcavanna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ void Contact::setContactInfo(void)
 
 bool Contact::getEmpty(void) const
 {
-    return firstName.empty() && lastName.empty() && nickName.empty() && phoneNumber.empty() && darkestSecret.empty();//La funzione .empty() è un membro della classe std::string in C++ che viene utilizzato per verificare se una stringa è vuota o contiene caratteri. Restituisce true se la stringa è vuota (ossia non contiene caratteri) e false se contiene almeno un carattere.
+    return firstName.empty() || lastName.empty() || nickName.empty() || phoneNumber.empty() || darkestSecret.empty();//La funzione .empty() è un membro della classe std::string in C++ che viene utilizzato per verificare se una stringa è vuota o contiene caratteri. Restituisce true se la stringa è vuota (ossia non contiene caratteri) e false se contiene almeno un carattere.
 }
 
 void Contact::getSummary(int index) const
