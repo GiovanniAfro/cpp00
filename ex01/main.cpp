@@ -6,7 +6,7 @@
 /*   By: gcavanna <gcavanna@student.42firenze.it    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 18:21:30 by gcavanna          #+#    #+#             */
-/*   Updated: 2023/11/05 18:50:30 by gcavanna         ###   ########.fr       */
+/*   Updated: 2023/11/07 14:23:29 by gcavanna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,9 @@ int main(void)
     while (true)
     {
         std::cout << "Enter a command (ADD, SEARCH, EXIT): ";
-        std::cin >> command;
+        std::getline(std::cin, command);
+        if (std::cin.eof())
+            exit(1);
 
         if (command == "ADD")
             phonebook.addContact();

@@ -6,7 +6,7 @@
 /*   By: gcavanna <gcavanna@student.42firenze.it    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 17:28:28 by gcavanna          #+#    #+#             */
-/*   Updated: 2023/11/06 23:44:20 by gcavanna         ###   ########.fr       */
+/*   Updated: 2023/11/07 14:20:23 by gcavanna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ void Contact::setContactInfo(void)
     std::cout << "Enter first name: ";
     std::cin.ignore();
     std::getline(std::cin, input);
+    if (std::cin.eof())
+        exit(1);
     if (input.empty())
     {
         std::cout << "First name cannot be empty. Please try again." << std::endl;
@@ -39,6 +41,8 @@ void Contact::setContactInfo(void)
 
     std::cout << "Enter last name: ";
     std::getline(std::cin, input);
+    if (std::cin.eof())
+        exit(1);
     if (input.empty())
     {
         std::cout << "Last name cannot be empty. Please try again." << std::endl;
@@ -48,6 +52,8 @@ void Contact::setContactInfo(void)
 
     std::cout << "Enter nickname: ";
     std::getline(std::cin, input);
+    if (std::cin.eof())
+        exit(1);
     if (input.empty())
     {
         std::cout << "Nickname cannot be empty. Please try again." << std::endl;
@@ -57,6 +63,8 @@ void Contact::setContactInfo(void)
 
     std::cout << "Enter phone number: ";
     std::getline(std::cin, input);
+    if (std::cin.eof())
+        exit(1);
     if (input.empty())
     {
         std::cout << "Phone number cannot be empty. Please try again." << std::endl;
@@ -66,6 +74,8 @@ void Contact::setContactInfo(void)
 
     std::cout << "Enter darkest secret :D : ";
     std::getline(std::cin, input);
+    if (std::cin.eof())
+        exit(1);
     if (input.empty())
     {
         std::cout << "Darkest secret cannot be empty. Please try again." << std::endl;

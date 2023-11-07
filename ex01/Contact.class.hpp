@@ -6,7 +6,7 @@
 /*   By: gcavanna <gcavanna@student.42firenze.it    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 16:58:06 by gcavanna          #+#    #+#             */
-/*   Updated: 2023/11/07 13:24:32 by gcavanna         ###   ########.fr       */
+/*   Updated: 2023/11/07 14:20:53 by gcavanna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <string>
 # include <iomanip>
 # include <limits>
+# include <stdlib.h>
 
 class Contact
 {
