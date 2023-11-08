@@ -6,7 +6,7 @@
 /*   By: gcavanna <gcavanna@student.42firenze.it    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 17:28:28 by gcavanna          #+#    #+#             */
-/*   Updated: 2023/11/07 14:20:23 by gcavanna         ###   ########.fr       */
+/*   Updated: 2023/11/08 15:10:08 by gcavanna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,9 @@ void Contact::setContactInfo(void)
     std::string input;
 
     std::cout << "Enter first name: ";
-    std::cin.ignore();
+    std::cin.ignore(); //viene utilizzata per ignorare o scartare un carattere dal buffer di input. Questo viene spesso utilizzato per eliminare eventuali caratteri extra, inclusi i caratteri di nuova linea (\n) che potrebbero essere rimasti da operazioni di input precedenti.
     std::getline(std::cin, input);
-    if (std::cin.eof())
+    if (std::cin.eof()) //è un'istruzione condizionale che controlla se è stata raggiunta la fine del file (EOF). Nel contesto dell'input dell'utente, ciò potrebbe verificarsi se l'utente invia un segnale EOF (di solito premendo Ctrl+D sui sistemi Unix o Ctrl+Z su Windows).
         exit(1);
     if (input.empty())
     {

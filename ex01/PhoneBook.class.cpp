@@ -6,7 +6,7 @@
 /*   By: gcavanna <gcavanna@student.42firenze.it    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 18:02:07 by gcavanna          #+#    #+#             */
-/*   Updated: 2023/11/06 23:40:15 by gcavanna         ###   ########.fr       */
+/*   Updated: 2023/11/08 15:16:42 by gcavanna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,8 +72,8 @@ void PhoneBook::getContact(void) const
 
     while (!(std::cin >> index) || index < 0 || index >= validContacts)
     {
-        std::cout << "Invalid input. Please enter a valid index: ";
-        std::cin.clear();
+        std::cout << "Invalid input. Please enter a valid index: "; 
+        std::cin.clear(); //Questa funzione cancella lo stato di errore sul flusso di input. Questo è necessario perché se un'operazione di input fallisce, le successive operazioni di input falliranno anche se non viene cancellato lo stato di errore.
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     }
 
